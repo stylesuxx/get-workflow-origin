@@ -1141,7 +1141,7 @@ function hashClear() {
  * @param {Object} hash The hash to modify.
  * @param {string} key The key of the value to remove.
  * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */27f3959d3f373695ee15043bb770013a196f30b027f3959d3f373695ee15043bb770013a196f30b0
+ */
 function hashDelete(key) {
   return this.has(key) && delete this.__data__[key];
 }

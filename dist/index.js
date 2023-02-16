@@ -1141,7 +1141,7 @@ function hashClear() {
  * @param {Object} hash The hash to modify.
  * @param {string} key The key of the value to remove.
  * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */
+ */27f3959d3f373695ee15043bb770013a196f30b027f3959d3f373695ee15043bb770013a196f30b0
 function hashDelete(key) {
   return this.has(key) && delete this.__data__[key];
 }
@@ -1871,6 +1871,7 @@ function getOrigin(octokit, runId, owner, repo) {
             `Event: ${sourceRun.event}, Head sha: ${sourceRun.head_sha}, url: ${sourceRun.url}`);
         let pullRequest = null;
         if (sourceRun.event === 'pull_request' ||
+        sourceRun.event === 'pull_request_target' ||
             sourceRun.event === 'pull_request_review') {
             pullRequest = yield findPullRequest(octokit, owner, repo, sourceRun.head_repository.owner.login, sourceRun.head_branch, sourceRun.head_sha);
         }

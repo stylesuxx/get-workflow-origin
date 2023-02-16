@@ -93,6 +93,7 @@ async function getOrigin(
       `Event: ${sourceRun.event}, Head sha: ${sourceRun.head_sha}, url: ${sourceRun.url}`
   )
   let pullRequest: rest.PullsListResponseItem | null = null
+  core.info('v0.2.0');
   if (
     sourceRun.event === 'pull_request' ||
     sourceRun.event === 'pull_request_review' ||

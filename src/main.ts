@@ -95,7 +95,8 @@ async function getOrigin(
   let pullRequest: rest.PullsListResponseItem | null = null
   if (
     sourceRun.event === 'pull_request' ||
-    sourceRun.event === 'pull_request_review'
+    sourceRun.event === 'pull_request_review' ||
+    sourceRun.event === 'pull_request_target'
   ) {
     pullRequest = await findPullRequest(
       octokit,
